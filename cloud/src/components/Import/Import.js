@@ -71,26 +71,28 @@ export default function Import({ getToken }) {
         <div style={{ display: 'block', height: '100vh', backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
             <Grid container spacing={0} direction={"column"} sx={{ minHeight: '100%' }} alignItems="center"
                 justifyContent="center" >
-                <Paper sx={{ maxWidth: '50%', marginTop: 10 }}>
-                    <link
-                        rel="stylesheet"
-                        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-                    />
-                    <Box textAlign={'center'}>
-                        <Typography margin={'auto'} width={'10vw'} marginTop={2} >
-                            Import photo
-                        </Typography>
-                    </Box>
-                    {source}
+                <Grid item xs={12} display={'flex'} flexDirection={"column"} width={'50%'}>
+                    <Paper sx={{ marginTop: 10, width:"100%"}} >
+                        <link
+                            rel="stylesheet"
+                            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+                        />
+                        <Box textAlign={'center'} display={'flex'} flexDirection={"column"}>
+                            <Typography margin={'auto'} flexGrow={1} flex={1} marginTop={2} >
+                                Import photo
+                            </Typography>
+                        </Box>
+                        {source}
 
-                    <Box display={'flex'} textAlign={'center'} marginBottom={3} marginTop={3}>
-                        <Button variant="contained" component="label" sx={{ margin: 'auto' }} >
-                            Upload
-                            <input hidden accept="image/*" multiple type="file" onChange={handleFile} />
-                        </Button>
-                        {send}
-                    </Box>
-                </Paper>
+                        <Box display={'flex'} textAlign={'center'} marginBottom={3} marginTop={3}>
+                            <Button variant="contained" component="label" sx={{ margin: 'auto' }} >
+                                Upload
+                                <input hidden accept="image/*" multiple type="file" onChange={handleFile} />
+                            </Button>
+                            {send}
+                        </Box>
+                    </Paper>
+                </Grid>
 
             </Grid>
             <Snackbar
