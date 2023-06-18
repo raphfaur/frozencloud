@@ -29,10 +29,10 @@ export default function Gallery({ getToken }) {
     }
     return (
         <Grid container spacing={2} padding={10} >
-            {images.map((name) => <Grid item xs={3} key={name}>
+            {images.map((name) => <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={name}>
                 <Preview name={name} token={token} />
             </Grid>)}
-            <Grid item xs={3}>
+            <Grid item xl={3} lg={4} md={6} sm={6} xs={12}>
                 <Grid item xs={12} display={'flex'}>
                 <Card sx={{ flexGrow: 1, minHeight: 200, display: 'flex', flexDirection: 'column-reverse' }}>
                     <link

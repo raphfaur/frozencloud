@@ -43,9 +43,9 @@ export default function Preview({ name, token }) {
         getImage({ token: token, name: name }).then((res) => { setImage(URL.createObjectURL(res.data)) })
     }, [])
     return (
-        <Grid container spacing={0} sx={{ width: '100%', display: 'flex' }}>
+        <Grid container spacing={0} sx={{ width: '100%', display: 'flex' }} >
             <Grid item xs={12} display={'flex'}>
-                <Card sx={{ backgroundImage: `url(${image})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', flexGrow: 1, minHeight: 200, display: 'flex', flexDirection: 'column-reverse' }}>
+                <Card sx={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', flexGrow: 1, minHeight: 200, display: 'flex', flexDirection: 'column-reverse' }}>
                     <link
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
