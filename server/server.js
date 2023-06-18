@@ -9,7 +9,7 @@ const nodemailer = require('nodemailer')
 const mysql = require('mysql')
 const { error, log } = require('console')
 
-const PATH = '/Users/foxy/Documents/Projets/react/server/db'
+const PATH = '/Users/foxy/Documents/Projets/react/frozencloud/server/db'
 //Mails
 const transporter = nodemailer.createTransport({
     service: 'gmail',

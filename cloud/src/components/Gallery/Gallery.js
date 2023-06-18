@@ -6,7 +6,7 @@ import { Add } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
 async function getMyImages(token) {
-    return axios.get('http://localhost:8080/gallery', {
+    return axios.get('http://138.195.138.73:8080/gallery', {
         headers: {
             Authorization: `Bearer ${token}`
         }

@@ -26,7 +26,7 @@ export default function Import({ getToken }) {
         const token = getToken();
         const formData = new FormData();
         formData.append('File', file);
-        await axios.post('http://localhost:8080/import', formData, {
+        await axios.post('http://138.195.138.73:8080/import', formData, {
             headers: {
                 Authorization: `Bearer ${token}`
             }

@@ -8,7 +8,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 
 async function getImage({ token, name }) {
-    return await axios.get('http://localhost:8080/photo', {
+    return await axios.get('http://138.195.138.73:8080/photo', {
         params: {
             name: name
         },
@@ -20,7 +20,7 @@ async function getImage({ token, name }) {
 }
 
 async function deleteImage({ token, name }) {
-    return await axios.delete('http://localhost:8080/delete', {
+    return await axios.delete('http://138.195.138.73:8080/delete', {
         params: {
             name: name
         },

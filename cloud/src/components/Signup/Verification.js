@@ -14,7 +14,7 @@ export default function Verification() {
 
 
     async function verify(e) {
-        await axios.post('http://localhost:8080/verify', {
+        await axios.post('http://138.195.138.73:8080/verify', {
             username: username,
             code: code
         })

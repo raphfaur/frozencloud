@@ -6,7 +6,7 @@ import background from '../../album.jpg';
 import { AccountCircle, Password } from "@mui/icons-material";
 
 async function login(credentials) {
-    return axios.post('http://localhost:8080/login', credentials).then(res => res.data).catch((e) => {
+    return axios.post('http://138.195.138.73:8080/login', credentials).then(res => res.data).catch((e) => {
         console.log('Network error')
     })
 }

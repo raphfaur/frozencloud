@@ -29,7 +29,7 @@ export default function Signup() {
                 </Alert>)
             setOpen(true)
         } else {
-            await axios.post('http://localhost:8080/signup', {
+            await axios.post('http://138.195.138.73:8080/signup', {
                 username: username,
                 password: password
             }).then((res) => {
