@@ -9,7 +9,7 @@ const nodemailer = require('nodemailer')
 const mysql = require('mysql')
 const { error, log } = require('console')
 
-const PATH = '/Users/foxy/Documents/Projets/react/frozencloud/server/db'
+const PATH = '/var/db'
 //Mails
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
 
 
 var connection = mysql.createConnection({
-    host: '138.195.138.73',
+    host: 'localhost',
     user: 'frozencloud',
     password: 'poney',
     database: 'frozencloud'
@@ -190,8 +190,8 @@ function handleSignup(req, res) {
                                 console.log(err);
                             } else {
                                 const mailData = {
-                                    from: 'photo.frozencloud@gmail.com',  // sender address
-                                    to: 'r.faure75@gmail.com',   // list of receivers
+                                    from: 'photo.frozencloud@gmail.com',
+                                    to: username,   
                                     subject: 'Your verification code',
                                     text: 'Your verification code',
                                     html: `<b>Hey there! Welcome to Frozencloud ! </b> <br> Here is your activation code : ${code} <br/> `,
